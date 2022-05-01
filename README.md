@@ -26,7 +26,7 @@ There are several commands which need to be run in order to run this repo. As we
 
 The bucket name will need to be in the bucket variable in the download_images.py file
 
-# Running Models
+## Running Models
 
 The models can be run from the following files
 
@@ -37,3 +37,7 @@ In order to train the supervised video motion magnification
 In order to train the self-supervised learning algorithms to generate the spatial transformations. The following commands can be run.
 
 ```python (byol_main|moco_main|scrl_main).py```
+
+In order to transfer representations and finetune the following command can be run
+
+```python magmot_main.py -transefer true -weights_path {file}```
