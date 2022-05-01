@@ -115,7 +115,6 @@ class Decoder(nn.Module):
 
         if self.texture_downsample:
             self.texture_up = nn.UpsamplingNearest2d(scale_factor=2)
-            # self.texture_cba = Conv2D_activa(dim_in, 32, 3, 1, 1, activation='relu')
 
         self.resblks = _repeat_blocks(ResBlk, 64, 64, num_resblk, dim_intermediate=64)
         self.up = nn.UpsamplingNearest2d(scale_factor=2)
@@ -181,10 +180,6 @@ class MagNet(nn.Module):
             return y_hat
 
 
-def main():
+if __name__ == '__main__':
     model = MagNet()
     print('model:\n', model)
-
-
-if __name__ == '__main__':
-    main()

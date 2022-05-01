@@ -227,3 +227,12 @@ def resize2d(img, size):
     with torch.no_grad():
         img_resized = (F.adaptive_avg_pool2d(Variable(img, volatile=True), size)).data
     return img_resized
+
+
+def generate_motion_frames(bucket, is_train=True, path='./',count=20, pixel_motion_bound=10):
+    
+    data_gen = DataGen()
+    data_gen.bucket(bucket)
+    data_gen.train(is_train)
+    data_gen.path(path)
+    data_gen.pixel_motion_bound(pixel_motion_bound)

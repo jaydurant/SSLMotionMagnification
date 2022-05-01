@@ -7,7 +7,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.backends.cudnn as cudnn
 
-from config import Config
+from config.matmogconfig import Config
 from magnet import MagNet
 from data import get_gen_ABC, cuda2numpy
 from callbacks import save_model, gen_state_dict
