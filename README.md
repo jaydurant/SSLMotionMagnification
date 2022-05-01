@@ -10,6 +10,9 @@ Approximately 200,000 frames were generated in order to train the supervised mot
 
 For the self-supervised methods 20,000 frames were generated in a similar fashion as described above. Each frame is passed through the ssl networks.
 
+### Model for Fine-tuning
+![figure](Fig2.png)
+
 ## Hypothesis
 
 Initial attemps tried to generate spatial repersentations through image augmentations which pertained to 
